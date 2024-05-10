@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.ogiraffers'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.33'
+// dependencies 에다가 MVN repository-mysql 검색, 클릭 후 그래들 복사 후 붙여넣기, 옆에 흰 코끼리 생기면 클릭.
+}
+
+test {
+    useJUnitPlatform()
+}
